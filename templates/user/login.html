@@ -1,0 +1,26 @@
+{% extends 'user/basee.html' %}
+
+{% block content %}
+<div class="card mx-auto" style="width: 40rem;">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+        <h5 class="card-title mb-3">Login to Continue!</h5>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Username</label>
+                <input type="input" name="username" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHeading" />
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+</div>
+
+{% endblock content %}
